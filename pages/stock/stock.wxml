@@ -1,0 +1,21 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">股票:</view>
+    </view>
+    <view class="page__bd">    
+        <view class="weui-panel">
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_text" wx:for="{{stockList}}">
+                    <view class="weui-media-box__title weui-media-box__title_in-text" wx:if="{{item.isrising}}">{{item.name}}({{item.sub}})</view>
+                    <view class="weui-media-box__title weui-media-box__title_in-text" wx:else>{{item.name}}(-{{item.sub}})</view>                  
+                    <view class="weui-media-box__title weui-media-box__title_in-text">当前：{{item.now}}</view>
+                    <view class="weui-media-box__info">
+                        <view class="weui-media-box__info__meta">最高：{{item.high}}</view>
+                        <view class="weui-media-box__info__meta">最低：{{item.low}}</view>
+                        <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">开盘：{{item.open}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
